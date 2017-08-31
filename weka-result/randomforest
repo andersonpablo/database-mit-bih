@@ -1,0 +1,62 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     Arrhythmia
+Instances:    2525
+Attributes:   3
+              Amplitude
+              RR
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 0.85 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        2397               94.9307 %
+Incorrectly Classified Instances       128                5.0693 %
+Kappa statistic                          0.9284
+Mean absolute error                      0.0228
+Root mean squared error                  0.0992
+Relative absolute error                 16.3022 %
+Root relative squared error             37.5091 %
+Total Number of Instances             2525     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1,000    0,017    0,894      1,000    0,944      0,937    0,999     0,980     (AFIB
+                 1,000    0,001    0,986      1,000    0,993      0,992    1,000     0,986     (AFL
+                 0,956    0,010    0,946      0,956    0,951      0,942    0,989     0,969     (B
+                 0,949    0,008    0,992      0,949    0,970      0,941    0,991     0,991     (N
+                 0,000    0,001    0,000      0,000    0,000      -0,002   0,685     0,045     (NOD
+                 1,000    0,006    0,870      1,000    0,930      0,930    0,998     0,932     (P
+                 0,342    0,001    0,813      0,342    0,481      0,523    0,924     0,542     (PREX
+                 1,000    0,005    0,774      1,000    0,872      0,877    0,998     0,820     (SVTA
+                 0,935    0,005    0,913      0,935    0,924      0,920    0,997     0,929     (T
+                 0,977    0,005    0,866      0,977    0,918      0,917    0,985     0,890     (VT
+Weighted Avg.    0,949    0,009    0,949      0,949    0,946      0,930    0,990     0,964     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g    h    i    j   <-- classified as
+  320    0    0    0    0    0    0    0    0    0 |    a = (AFIB
+    0  136    0    0    0    0    0    0    0    0 |    b = (AFL
+    2    0  389    0    0    8    0    0    8    0 |    c = (B
+   26    1    4 1198    2    7    3   12    1    9 |    d = (N
+    2    1    3    3    0    0    0    0    0    1 |    e = (NOD
+    0    0    0    0    0  100    0    0    0    0 |    f = (P
+    6    0    9    5    0    0   13    0    2    3 |    g = (PREX
+    0    0    0    0    0    0    0   41    0    0 |    h = (SVTA
+    0    0    6    2    0    0    0    0  116    0 |    i = (T
+    2    0    0    0    0    0    0    0    0   84 |    j = (VT
+

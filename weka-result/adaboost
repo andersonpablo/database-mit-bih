@@ -1,0 +1,79 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AdaBoostM1 -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation:     Arrhythmia
+Instances:    2525
+Attributes:   3
+              Amplitude
+              RR
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AdaBoostM1: No boosting possible, one classifier used!
+Decision Stump
+
+Classifications
+
+RR <= 1.138888888980035 : (N
+RR > 1.138888888980035 : (B
+RR is missing : (N
+
+Class distributions
+
+RR <= 1.138888888980035
+(AFIB	(AFL	(B	(N	(NOD	(P	(PREX	(SVTA	(T	(VT	
+0.14378029079159935	0.06354334948842219	0.003769520732364028	0.6774367259019924	0.003769520732364028	0.029617662897145933	0.011847065158858373	0.0210016155088853	0.0	0.045234248788368334	
+RR > 1.138888888980035
+(AFIB	(AFL	(B	(N	(NOD	(P	(PREX	(SVTA	(T	(VT	
+0.07934131736526946	0.02694610778443114	0.5988023952095808	0.0074850299401197605	0.004491017964071856	0.06736526946107785	0.023952095808383235	0.0029940119760479044	0.18562874251497005	0.0029940119760479044	
+RR is missing
+(AFIB	(AFL	(B	(N	(NOD	(P	(PREX	(SVTA	(T	(VT	
+0.12673267326732673	0.05386138613861386	0.1611881188118812	0.5001980198019802	0.0039603960396039604	0.039603960396039604	0.015049504950495049	0.016237623762376238	0.04910891089108911	0.03405940594059406	
+
+
+
+Time taken to build model: 0.04 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1654               65.505  %
+Incorrectly Classified Instances       871               34.495  %
+Kappa statistic                          0.4166
+Mean absolute error                      0.107 
+Root mean squared error                  0.2316
+Relative absolute error                 76.4392 %
+Root relative squared error             87.6032 %
+Total Number of Instances             2525     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,535     0,135     (AFIB
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,519     0,055     (AFL
+                 0,973    0,135    0,581      0,973    0,728      0,695    0,916     0,558     (B
+                 0,996    0,464    0,682      0,996    0,810      0,599    0,764     0,682     (N
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,245     0,003     (NOD
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,585     0,053     (P
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,489     0,015     (PREX
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,585     0,019     (SVTA
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,883     0,178     (T
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,612     0,043     (VT
+Weighted Avg.    0,655    0,254    0,435      0,655    0,522      0,412    0,731     0,464     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g    h    i    j   <-- classified as
+    0    0   56  264    0    0    0    0    0    0 |    a = (AFIB
+    0    0   30  106    0    0    0    0    0    0 |    b = (AFL
+    0    0  396   11    0    0    0    0    0    0 |    c = (B
+    0    0    5 1258    0    0    0    0    0    0 |    d = (N
+    0    0    3    7    0    0    0    0    0    0 |    e = (NOD
+    0    0   48   52    0    0    0    0    0    0 |    f = (P
+    0    0   15   23    0    0    0    0    0    0 |    g = (PREX
+    0    0    2   39    0    0    0    0    0    0 |    h = (SVTA
+    0    0  124    0    0    0    0    0    0    0 |    i = (T
+    0    0    2   84    0    0    0    0    0    0 |    j = (VT
+

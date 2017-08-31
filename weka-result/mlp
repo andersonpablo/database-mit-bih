@@ -1,0 +1,208 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+Relation:     Arrhythmia
+Instances:    2525
+Attributes:   3
+              Amplitude
+              RR
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    0.3606620102802102
+    Node 10    -3.662265810643237
+    Node 11    -3.281060024273703
+    Node 12    -0.38439018964266797
+    Node 13    4.709715812597266
+    Node 14    -3.058373416100107
+    Node 15    -1.3351570383889964
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    -3.080086502703388
+    Node 10    -14.530488242498866
+    Node 11    -2.183791057309561
+    Node 12    -3.044856919966768
+    Node 13    1.23003248982972
+    Node 14    -2.1734156437937875
+    Node 15    2.626556724235303
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -4.232695582005165
+    Node 10    5.043738639664458
+    Node 11    -13.077423489770823
+    Node 12    1.9013863789287078
+    Node 13    -2.536312507629549
+    Node 14    -5.118249041379785
+    Node 15    3.9361241119786707
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    -7.5689528173019385
+    Node 10    -5.067779521258839
+    Node 11    11.749890509943093
+    Node 12    -3.6988732199085343
+    Node 13    -5.237715848067675
+    Node 14    -0.23135786658632615
+    Node 15    -2.1810975441491403
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -4.502255722519199
+    Node 10    -1.5547165326930499
+    Node 11    -1.4618855088754596
+    Node 12    -1.398792231971665
+    Node 13    -0.5599805689350277
+    Node 14    -1.3374341474611586
+    Node 15    0.38822360832271413
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    0.18033217439379368
+    Node 10    -9.521130001186792
+    Node 11    -9.426195674632599
+    Node 12    -1.8827323316657447
+    Node 13    5.923332307840986
+    Node 14    -2.1370642032761173
+    Node 15    -0.5669815214349297
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -4.684032090154483
+    Node 10    -0.7236091046177321
+    Node 11    -0.08931791541256803
+    Node 12    3.246808222538145
+    Node 13    1.007675265029729
+    Node 14    -2.3136895076973927
+    Node 15    -3.597130327604314
+Sigmoid Node 7
+    Inputs    Weights
+    Threshold    -4.080350965431049
+    Node 10    -2.291428379561291
+    Node 11    0.3373928919791651
+    Node 12    0.17156688283360066
+    Node 13    0.3621551739502589
+    Node 14    -1.4351703402026206
+    Node 15    -0.7706190884751559
+Sigmoid Node 8
+    Inputs    Weights
+    Threshold    0.6278714302920035
+    Node 10    -1.2445578695691581
+    Node 11    -11.160117698770371
+    Node 12    -4.559646987219354
+    Node 13    -3.1428031100665095
+    Node 14    8.895433579826635
+    Node 15    -8.47778363174305
+Sigmoid Node 9
+    Inputs    Weights
+    Threshold    -4.870555937505121
+    Node 10    -6.007061705128191
+    Node 11    0.24745451680985137
+    Node 12    2.951581077531494
+    Node 13    -0.02513797165682346
+    Node 14    -1.6927768765053157
+    Node 15    2.313095652707432
+Sigmoid Node 10
+    Inputs    Weights
+    Threshold    -0.18720505946496094
+    Attrib Amplitude    0.12894036370687031
+    Attrib RR    24.82916090088271
+Sigmoid Node 11
+    Inputs    Weights
+    Threshold    -10.789275693268818
+    Attrib Amplitude    -0.6335786784037721
+    Attrib RR    -40.56906352568942
+Sigmoid Node 12
+    Inputs    Weights
+    Threshold    -2.0002171862567852
+    Attrib Amplitude    16.695552552593238
+    Attrib RR    -2.4577153662223856
+Sigmoid Node 13
+    Inputs    Weights
+    Threshold    -14.323283217283926
+    Attrib Amplitude    0.28936035508567337
+    Attrib RR    -32.262208641582475
+Sigmoid Node 14
+    Inputs    Weights
+    Threshold    -8.143866445937254
+    Attrib Amplitude    -2.4608373387361797
+    Attrib RR    11.182928329151952
+Sigmoid Node 15
+    Inputs    Weights
+    Threshold    -3.802598344365093
+    Attrib Amplitude    -8.318837581253932
+    Attrib RR    -0.8669274161611379
+Class (AFIB
+    Input
+    Node 0
+Class (AFL
+    Input
+    Node 1
+Class (B
+    Input
+    Node 2
+Class (N
+    Input
+    Node 3
+Class (NOD
+    Input
+    Node 4
+Class (P
+    Input
+    Node 5
+Class (PREX
+    Input
+    Node 6
+Class (SVTA
+    Input
+    Node 7
+Class (T
+    Input
+    Node 8
+Class (VT
+    Input
+    Node 9
+
+
+Time taken to build model: 4.17 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1886               74.6931 %
+Incorrectly Classified Instances       639               25.3069 %
+Kappa statistic                          0.6198
+Mean absolute error                      0.0741
+Root mean squared error                  0.1904
+Relative absolute error                 52.888  %
+Root relative squared error             72.0128 %
+Total Number of Instances             2525     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,622    0,090    0,501      0,622    0,555      0,486    0,847     0,502     (AFIB
+                 0,250    0,032    0,306      0,250    0,275      0,240    0,909     0,285     (AFL
+                 0,872    0,046    0,785      0,872    0,827      0,793    0,972     0,890     (B
+                 0,951    0,171    0,848      0,951    0,896      0,786    0,960     0,949     (N
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,737     0,009     (NOD
+                 0,170    0,008    0,472      0,170    0,250      0,267    0,840     0,247     (P
+                 0,132    0,002    0,455      0,132    0,204      0,239    0,932     0,216     (PREX
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,626     0,025     (SVTA
+                 0,589    0,011    0,737      0,589    0,655      0,643    0,986     0,779     (T
+                 0,023    0,000    1,000      0,023    0,045      0,150    0,794     0,141     (VT
+Weighted Avg.    0,747    0,107    0,726      0,747    0,713      0,646    0,929     0,754     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g    h    i    j   <-- classified as
+  199   28   18   67    0    5    3    0    0    0 |    a = (AFIB
+   45   34    8   40    0    9    0    0    0    0 |    b = (AFL
+   10   14  355    0    0    5    0    0   23    0 |    c = (B
+   50    5    3 1201    0    0    3    0    1    0 |    d = (N
+    2    0    3    5    0    0    0    0    0    0 |    e = (NOD
+   28   23    7   25    0   17    0    0    0    0 |    f = (P
+   16    0   11    4    0    0    5    0    2    0 |    g = (PREX
+   10    0    0   31    0    0    0    0    0    0 |    h = (SVTA
+    4    0   47    0    0    0    0    0   73    0 |    i = (T
+   33    7    0   44    0    0    0    0    0    2 |    j = (VT
+

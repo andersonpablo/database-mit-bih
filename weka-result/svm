@@ -1,0 +1,603 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     Arrhythmia
+Instances:    2525
+Attributes:   3
+              Amplitude
+              RR
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: (AFIB, (AFL
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -3.7038 * (normalized) Amplitude
+ +       1.1973 * (normalized) RR
+ -       0.3416
+
+Number of kernel evaluations: 2902 (66.781% cached)
+
+Classifier for classes: (AFIB, (B
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.8118 * (normalized) Amplitude
+ +       7.9705 * (normalized) RR
+ -       3.062 
+
+Number of kernel evaluations: 7129 (62.912% cached)
+
+Classifier for classes: (AFIB, (N
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.018  * (normalized) Amplitude
+ +       0.4189 * (normalized) RR
+ +       0.8633
+
+Number of kernel evaluations: 27836 (71.535% cached)
+
+Classifier for classes: (AFIB, (NOD
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.004  * (normalized) Amplitude
+ +       0.0003 * (normalized) RR
+ -       0.9994
+
+Number of kernel evaluations: 1238 (51.317% cached)
+
+Classifier for classes: (AFIB, (P
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.0016 * (normalized) Amplitude
+ +      -0.0029 * (normalized) RR
+ -       0.9984
+
+Number of kernel evaluations: 2141 (47.37% cached)
+
+Classifier for classes: (AFIB, (PREX
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.1474 * (normalized) Amplitude
+ +       0.1519 * (normalized) RR
+ -       1.1243
+
+Number of kernel evaluations: 2161 (68.462% cached)
+
+Classifier for classes: (AFIB, (SVTA
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0001 * (normalized) Amplitude
+ +      -0.002  * (normalized) RR
+ -       0.9994
+
+Number of kernel evaluations: 3807 (53.225% cached)
+
+Classifier for classes: (AFIB, (T
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.9772 * (normalized) Amplitude
+ +       6.557  * (normalized) RR
+ -       4.029 
+
+Number of kernel evaluations: 1372 (57.615% cached)
+
+Classifier for classes: (AFIB, (VT
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.0021 * (normalized) Amplitude
+ +       0.001  * (normalized) RR
+ -       0.9994
+
+Number of kernel evaluations: 4187 (49.499% cached)
+
+Classifier for classes: (AFL, (B
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         1.2587 * (normalized) Amplitude
+ +       7.2956 * (normalized) RR
+ -       2.9299
+
+Number of kernel evaluations: 3357 (55.56% cached)
+
+Classifier for classes: (AFL, (N
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.4471 * (normalized) Amplitude
+ +       0.217  * (normalized) RR
+ +       0.8404
+
+Number of kernel evaluations: 1828 (51.627% cached)
+
+Classifier for classes: (AFL, (NOD
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.0012 * (normalized) Amplitude
+ +      -0.0007 * (normalized) RR
+ -       0.9996
+
+Number of kernel evaluations: 443 (50.447% cached)
+
+Classifier for classes: (AFL, (P
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         2.6849 * (normalized) Amplitude
+ +       1.0976 * (normalized) RR
+ -       1.6189
+
+Number of kernel evaluations: 1550 (56.74% cached)
+
+Classifier for classes: (AFL, (PREX
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         5.1586 * (normalized) Amplitude
+ +       0.2282 * (normalized) RR
+ -       2.3571
+
+Number of kernel evaluations: 762 (61.824% cached)
+
+Classifier for classes: (AFL, (SVTA
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         4.9907 * (normalized) Amplitude
+ +       0.0566 * (normalized) RR
+ -       2.0451
+
+Number of kernel evaluations: 798 (52.809% cached)
+
+Classifier for classes: (AFL, (T
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         4.0542 * (normalized) Amplitude
+ +       4.9096 * (normalized) RR
+ -       3.7279
+
+Number of kernel evaluations: 803 (61.413% cached)
+
+Classifier for classes: (AFL, (VT
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         4.43   * (normalized) Amplitude
+ +      -0.2242 * (normalized) RR
+ -       1.4903
+
+Number of kernel evaluations: 1349 (57.27% cached)
+
+Classifier for classes: (B, (N
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0222 * (normalized) Amplitude
+ +     -11.3438 * (normalized) RR
+ +       4.9229
+
+Number of kernel evaluations: 19245 (72.786% cached)
+
+Classifier for classes: (B, (NOD
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0002 * (normalized) Amplitude
+ +      -0.0037 * (normalized) RR
+ -       0.9983
+
+Number of kernel evaluations: 1294 (52.67% cached)
+
+Classifier for classes: (B, (P
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.2469 * (normalized) Amplitude
+ +      -7.8607 * (normalized) RR
+ +       3     
+
+Number of kernel evaluations: 3559 (60.86% cached)
+
+Classifier for classes: (B, (PREX
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         1.0923 * (normalized) Amplitude
+ +      -3.8758 * (normalized) RR
+ +       0.3523
+
+Number of kernel evaluations: 2346 (60.585% cached)
+
+Classifier for classes: (B, (SVTA
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.8265 * (normalized) Amplitude
+ +      -4.8585 * (normalized) RR
+ +       0.9844
+
+Number of kernel evaluations: 1791 (63.59% cached)
+
+Classifier for classes: (B, (T
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.251  * (normalized) Amplitude
+ +       4.4667 * (normalized) RR
+ -       4.0528
+
+Number of kernel evaluations: 5609 (59.63% cached)
+
+Classifier for classes: (B, (VT
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.6443 * (normalized) Amplitude
+ +      -7.0721 * (normalized) RR
+ +       2.3223
+
+Number of kernel evaluations: 2987 (64.714% cached)
+
+Classifier for classes: (N, (NOD
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0009 * (normalized) Amplitude
+ +       0.0021 * (normalized) RR
+ -       1.001 
+
+Number of kernel evaluations: 1697 (51.981% cached)
+
+Classifier for classes: (N, (P
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0002 * (normalized) Amplitude
+ +       0.014  * (normalized) RR
+ -       1.0051
+
+Number of kernel evaluations: 9891 (50.269% cached)
+
+Classifier for classes: (N, (PREX
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         1.8735 * (normalized) Amplitude
+ +       1.8476 * (normalized) RR
+ -       2.611 
+
+Number of kernel evaluations: 654 (51.627% cached)
+
+Classifier for classes: (N, (SVTA
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.0001 * (normalized) Amplitude
+ +      -0.0041 * (normalized) RR
+ -       0.9991
+
+Number of kernel evaluations: 6333 (49.83% cached)
+
+Classifier for classes: (N, (T
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.1357 * (normalized) Amplitude
+ +       5.7574 * (normalized) RR
+ -       3.0489
+
+Number of kernel evaluations: 6672 (73.121% cached)
+
+Classifier for classes: (N, (VT
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.0001 * (normalized) Amplitude
+ +       0.0001 * (normalized) RR
+ -       1     
+
+Number of kernel evaluations: 8731 (48.977% cached)
+
+Classifier for classes: (NOD, (P
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0018 * (normalized) Amplitude
+ +      -0.0006 * (normalized) RR
+ +       0.9999
+
+Number of kernel evaluations: 367 (52.767% cached)
+
+Classifier for classes: (NOD, (PREX
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         3.359  * (normalized) Amplitude
+ +       0.1444 * (normalized) RR
+ -       0.8674
+
+Number of kernel evaluations: 120 (48.276% cached)
+
+Classifier for classes: (NOD, (SVTA
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.6949 * (normalized) Amplitude
+ +      -0.6356 * (normalized) RR
+ +       0.9822
+
+Number of kernel evaluations: 92 (43.902% cached)
+
+Classifier for classes: (NOD, (T
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         2.3248 * (normalized) Amplitude
+ +       1.9077 * (normalized) RR
+ -       0.937 
+
+Number of kernel evaluations: 193 (67.672% cached)
+
+Classifier for classes: (NOD, (VT
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.0001 * (normalized) Amplitude
+ +       0.0006 * (normalized) RR
+ +       0.9999
+
+Number of kernel evaluations: 807 (49.563% cached)
+
+Classifier for classes: (P, (PREX
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         4.4103 * (normalized) Amplitude
+ +      -0.2378 * (normalized) RR
+ -       2.1213
+
+Number of kernel evaluations: 528 (68.154% cached)
+
+Classifier for classes: (P, (SVTA
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         1.7463 * (normalized) Amplitude
+ +      -1.4074 * (normalized) RR
+ -       0.895 
+
+Number of kernel evaluations: 734 (61.389% cached)
+
+Classifier for classes: (P, (T
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         1.8189 * (normalized) Amplitude
+ +       6.0018 * (normalized) RR
+ -       3.9212
+
+Number of kernel evaluations: 780 (53.04% cached)
+
+Classifier for classes: (P, (VT
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         3.443  * (normalized) Amplitude
+ +      -3.4832 * (normalized) RR
+ -       0.1639
+
+Number of kernel evaluations: 1208 (56.264% cached)
+
+Classifier for classes: (PREX, (SVTA
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -3.9943 * (normalized) Amplitude
+ +      -1.2649 * (normalized) RR
+ +       2.4303
+
+Number of kernel evaluations: 255 (52.952% cached)
+
+Classifier for classes: (PREX, (T
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -3.1166 * (normalized) Amplitude
+ +       3.3984 * (normalized) RR
+ -       0.0328
+
+Number of kernel evaluations: 654 (53.748% cached)
+
+Classifier for classes: (PREX, (VT
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -2.8594 * (normalized) Amplitude
+ +      -2.4026 * (normalized) RR
+ +       2.6625
+
+Number of kernel evaluations: 426 (59.038% cached)
+
+Classifier for classes: (SVTA, (T
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.085  * (normalized) Amplitude
+ +       4.9977 * (normalized) RR
+ -       2.3918
+
+Number of kernel evaluations: 590 (63.286% cached)
+
+Classifier for classes: (SVTA, (VT
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.0003 * (normalized) Amplitude
+ +      -0.0027 * (normalized) RR
+ +       1.0007
+
+Number of kernel evaluations: 720 (48.936% cached)
+
+Classifier for classes: (T, (VT
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.7324 * (normalized) Amplitude
+ +      -5.227  * (normalized) RR
+ +       2.9318
+
+Number of kernel evaluations: 709 (67.282% cached)
+
+
+
+Time taken to build model: 0.47 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1640               64.9505 %
+Incorrectly Classified Instances       885               35.0495 %
+Kappa statistic                          0.395 
+Mean absolute error                      0.1637
+Root mean squared error                  0.2788
+Relative absolute error                116.9442 %
+Root relative squared error            105.4242 %
+Total Number of Instances             2525     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,009    0,000    1,000      0,009    0,019      0,091    0,569     0,144     (AFIB
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,769     0,110     (AFL
+                 0,914    0,096    0,646      0,914    0,757      0,717    0,933     0,634     (B
+                 0,997    0,536    0,650      0,997    0,787      0,544    0,731     0,650     (N
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,686     0,008     (NOD
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,470     0,038     (P
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,887     0,101     (PREX
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,606     0,021     (SVTA
+                 0,048    0,002    0,600      0,048    0,090      0,161    0,943     0,396     (T
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,557     0,039     (VT
+Weighted Avg.    0,650    0,284    0,586      0,650    0,522      0,407    0,739     0,476     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e    f    g    h    i    j   <-- classified as
+    3    0   34  283    0    0    0    0    0    0 |    a = (AFIB
+    0    0   10  126    0    0    0    0    0    0 |    b = (AFL
+    0    0  372   31    0    0    0    0    4    0 |    c = (B
+    0    0    4 1259    0    0    0    0    0    0 |    d = (N
+    0    0    3    7    0    0    0    0    0    0 |    e = (NOD
+    0    0   20   80    0    0    0    0    0    0 |    f = (P
+    0    0   15   23    0    0    0    0    0    0 |    g = (PREX
+    0    0    0   41    0    0    0    0    0    0 |    h = (SVTA
+    0    0  118    0    0    0    0    0    6    0 |    i = (T
+    0    0    0   86    0    0    0    0    0    0 |    j = (VT
+
