@@ -1,0 +1,1193 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.AdaBoostM1 -P 100 -S 1 -I 10 -W weka.classifiers.trees.J48 -- -C 0.25 -M 2
+Relation:     arrhythmia
+Instances:    452
+Attributes:   280
+              [list of attributes omitted]
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+AdaBoostM1: Base classifiers and their weights: 
+
+J48 pruned tree
+------------------
+
+chAVR_Qwave <= 92
+|   chV3_QwaveAmp <= -2.5
+|   |   chV1_RwaveAmp <= 0.9
+|   |   |   chV6_PwaveAmp <= 0.1: 6 (2.0/1.0)
+|   |   |   chV6_PwaveAmp > 0.1: 3 (15.0)
+|   |   chV1_RwaveAmp > 0.9: 16 (3.0/1.0)
+|   chV3_QwaveAmp > -2.5
+|   |   heartrate <= 58
+|   |   |   chV1_RPwave <= 32
+|   |   |   |   chDII_RRwaveExists = 0
+|   |   |   |   |   chAVR_SwaveAmp <= -7.2: 1 (2.0)
+|   |   |   |   |   chAVR_SwaveAmp > -7.2
+|   |   |   |   |   |   chAVF_JJwaveAmp <= -0.8: 1 (2.0/1.0)
+|   |   |   |   |   |   chAVF_JJwaveAmp > -0.8
+|   |   |   |   |   |   |   chAVR_RwaveAmp <= 1.7: 6 (26.09/2.09)
+|   |   |   |   |   |   |   chAVR_RwaveAmp > 1.7: 1 (2.0/1.0)
+|   |   |   |   chDII_RRwaveExists = 1: 10 (2.0/1.0)
+|   |   |   chV1_RPwave > 32: 10 (3.0)
+|   |   heartrate > 58
+|   |   |   heartrate <= 101
+|   |   |   |   chV1_RPwaveAmp <= 0.9
+|   |   |   |   |   chDII_QwaveAmp <= -1.4
+|   |   |   |   |   |   sex = 0
+|   |   |   |   |   |   |   PRinterval <= 136
+|   |   |   |   |   |   |   |   chDI_intrinsicReflecttions <= 32: 2 (3.0/1.0)
+|   |   |   |   |   |   |   |   chDI_intrinsicReflecttions > 32: 1 (2.0/1.0)
+|   |   |   |   |   |   |   PRinterval > 136: 4 (11.0)
+|   |   |   |   |   |   sex = 1: 16 (3.0/1.0)
+|   |   |   |   |   chDII_QwaveAmp > -1.4
+|   |   |   |   |   |   chV4_TwaveAmp <= -0.5
+|   |   |   |   |   |   |   chAVL_Rwave <= 76: 2 (24.0/1.0)
+|   |   |   |   |   |   |   chAVL_Rwave > 76: 1 (2.0)
+|   |   |   |   |   |   chV4_TwaveAmp > -0.5
+|   |   |   |   |   |   |   chV2_TwaveAmp <= -1: 10 (7.0/1.0)
+|   |   |   |   |   |   |   chV2_TwaveAmp > -1
+|   |   |   |   |   |   |   |   chV1_Swave <= 76
+|   |   |   |   |   |   |   |   |   chAVF_Qwave <= 32
+|   |   |   |   |   |   |   |   |   |   chV4_RPwaveAmp <= 0.7
+|   |   |   |   |   |   |   |   |   |   |   chV3_Qwave <= 20
+|   |   |   |   |   |   |   |   |   |   |   |   chDI_DD_RPwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_SPwave <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_intrinsicReflecttions <= 72
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_DD_RRwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_RPwave <= 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_JJwaveAmp <= -0.8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_intrinsicReflecttions <= 40: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_intrinsicReflecttions > 40: 2 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_JJwaveAmp > -0.8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_TwaveAmp <= -0.6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Q-Tinterval <= 324
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_Rwave <= 36: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_Rwave > 36: 5 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Q-Tinterval > 324
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_intrinsicReflecttions <= 44: 1 (203.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_intrinsicReflecttions > 44
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_intrinsicReflecttions <= 32: 16 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_intrinsicReflecttions > 32: 1 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_TwaveAmp > -0.6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_DD_RRwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_PwaveAmp <= -0.3: 2 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_PwaveAmp > -0.3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV3_TwaveAmp <= 0.7: 2 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV3_TwaveAmp > 0.7: 1 (18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_DD_RRwaveExists = 1: 2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_RPwave > 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_intrinsicReflecttions <= 24: 2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_intrinsicReflecttions > 24
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_TwaveAmp <= -1.6: 10 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_TwaveAmp > -1.6: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_DD_RRwaveExists = 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV3_intrinsicReflecttions <= 32: 16 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV3_intrinsicReflecttions > 32: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_intrinsicReflecttions > 72
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PRinterval <= 155: 10 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PRinterval > 155: 1 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_SPwave > 0: 2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   chDI_DD_RPwaveExists = 1: 2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   chV3_Qwave > 20: 2 (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   chV4_RPwaveAmp > 0.7: 10 (2.0)
+|   |   |   |   |   |   |   |   |   chAVF_Qwave > 32
+|   |   |   |   |   |   |   |   |   |   chDII_RPwave <= 8
+|   |   |   |   |   |   |   |   |   |   |   chV5_Swave <= 48: 4 (4.88/0.88)
+|   |   |   |   |   |   |   |   |   |   |   chV5_Swave > 48: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   chDII_RPwave > 8: 2 (2.0/1.0)
+|   |   |   |   |   |   |   |   chV1_Swave > 76: 8 (3.0/2.0)
+|   |   |   |   chV1_RPwaveAmp > 0.9
+|   |   |   |   |   QRST <= 75
+|   |   |   |   |   |   chDIII_PwaveAmp <= -0.5: 2 (2.0)
+|   |   |   |   |   |   chDIII_PwaveAmp > -0.5
+|   |   |   |   |   |   |   height <= 176: 10 (28.0/1.0)
+|   |   |   |   |   |   |   height > 176: 1 (2.0)
+|   |   |   |   |   QRST > 75: 16 (3.0/1.0)
+|   |   |   heartrate > 101
+|   |   |   |   chV6_JJwaveAmp <= -0.8
+|   |   |   |   |   sex = 0: 10 (2.0)
+|   |   |   |   |   sex = 1: 15 (2.0)
+|   |   |   |   chV6_JJwaveAmp > -0.8: 5 (10.03/0.03)
+chAVR_Qwave > 92: 9 (8.0)
+
+Number of Leaves  : 	50
+
+Size of the tree : 	99
+
+
+Weight: 2.48
+
+J48 pruned tree
+------------------
+
+chDI_Rwave <= 100
+|   chV3_DD_RPwaveExists = 0
+|   |   chV3_intrinsicReflecttions <= 0
+|   |   |   sex = 0
+|   |   |   |   chV2_RPwave <= 0: 3 (8.67/1.63)
+|   |   |   |   chV2_RPwave > 0: 7 (6.46)
+|   |   |   sex = 1: 15 (6.46)
+|   |   chV3_intrinsicReflecttions > 0
+|   |   |   chV1_Qwave <= 76
+|   |   |   |   chDII_JJwaveAmp <= -1.1
+|   |   |   |   |   chAVL_Swave <= 48: 2 (3.79/1.63)
+|   |   |   |   |   chAVL_Swave > 48: 15 (12.91)
+|   |   |   |   chDII_JJwaveAmp > -1.1
+|   |   |   |   |   chV3_Qwave <= 20
+|   |   |   |   |   |   chV6_RwaveAmp <= 21.1
+|   |   |   |   |   |   |   chV1_RwaveAmp <= 5.1
+|   |   |   |   |   |   |   |   chV3_DD_RTwaveExists = 0
+|   |   |   |   |   |   |   |   |   heartrate <= 57
+|   |   |   |   |   |   |   |   |   |   chDII_RRwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   chV1_RPwave <= 16: 6 (13.55/1.63)
+|   |   |   |   |   |   |   |   |   |   |   chV1_RPwave > 16: 10 (2.17/0.54)
+|   |   |   |   |   |   |   |   |   |   chDII_RRwaveExists = 1: 16 (6.46)
+|   |   |   |   |   |   |   |   |   heartrate > 57
+|   |   |   |   |   |   |   |   |   |   chAVL_Rwave <= 84
+|   |   |   |   |   |   |   |   |   |   |   chV4_JJwaveAmp <= -1.2
+|   |   |   |   |   |   |   |   |   |   |   |   chAVL_Qwave <= 20: 2 (11.33/0.54)
+|   |   |   |   |   |   |   |   |   |   |   |   chAVL_Qwave > 20: 10 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   chV4_JJwaveAmp > -1.2
+|   |   |   |   |   |   |   |   |   |   |   |   chV1_Swave <= 72
+|   |   |   |   |   |   |   |   |   |   |   |   |   PRinterval <= 209
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   QRST <= 124
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   heartrate <= 94
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_PwaveAmp <= -0.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 60: 10 (7.54/0.54)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 60: 16 (6.46)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_PwaveAmp > -0.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Pinterval <= 51: 16 (14.54/1.63)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   Pinterval > 51
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_SwaveAmp <= -18.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV4_intrinsicReflecttions <= 24: 16 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV4_intrinsicReflecttions > 24
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV4_Swave <= 40: 1 (2.71)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV4_Swave > 40: 2 (2.17/0.54)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_SwaveAmp > -18.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_RPwave <= 8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_intrinsicReflecttions <= 60
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_TwaveAmp <= -0.6: 2 (8.13/2.17)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_TwaveAmp > -0.6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_QwaveAmp <= -2.7: 4 (2.71/1.08)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_QwaveAmp > -2.7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV4_TwaveAmp <= -1.2: 2 (2.17/0.54)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV4_TwaveAmp > -1.2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_RPwaveAmp <= 0.9: 1 (135.85/8.13)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_RPwaveAmp > 0.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 39: 10 (3.79)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 39: 1 (8.63/1.08)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_intrinsicReflecttions > 60
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_QRSA <= 6.2: 10 (9.17)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_QRSA > 6.2: 1 (10.84/2.71)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_RPwave > 8: 10 (11.38/3.79)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   heartrate > 94
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   heartrate <= 97: 16 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   heartrate > 97
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_TwaveAmp <= -0.1: 15 (2.17/1.08)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_TwaveAmp > -0.1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   heartrate <= 102: 1 (2.17/0.54)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   heartrate > 102: 5 (3.25)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   QRST > 124: 16 (12.91)
+|   |   |   |   |   |   |   |   |   |   |   |   |   PRinterval > 209
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chV5_intrinsicReflecttions <= 24: 7 (6.46)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chV5_intrinsicReflecttions > 24: 1 (4.88/0.54)
+|   |   |   |   |   |   |   |   |   |   |   |   chV1_Swave > 72: 16 (13.46/0.54)
+|   |   |   |   |   |   |   |   |   |   chAVL_Rwave > 84: 10 (16.17/1.08)
+|   |   |   |   |   |   |   |   chV3_DD_RTwaveExists = 1: 2 (6.46)
+|   |   |   |   |   |   |   chV1_RwaveAmp > 5.1
+|   |   |   |   |   |   |   |   chV1_DD_RRwaveExists = 0
+|   |   |   |   |   |   |   |   |   sex = 0: 4 (2.17/0.54)
+|   |   |   |   |   |   |   |   |   sex = 1: 5 (7.0)
+|   |   |   |   |   |   |   |   chV1_DD_RRwaveExists = 1: 10 (2.17)
+|   |   |   |   |   |   chV6_RwaveAmp > 21.1: 14 (6.46)
+|   |   |   |   |   chV3_Qwave > 20: 14 (8.08/1.63)
+|   |   |   chV1_Qwave > 76
+|   |   |   |   QRSduration <= 89: 7 (7.0/0.54)
+|   |   |   |   QRSduration > 89: 8 (7.0/0.54)
+|   chV3_DD_RPwaveExists = 1: 14 (14.0/1.08)
+chDI_Rwave > 100: 9 (11.33/0.54)
+
+Number of Leaves  : 	44
+
+Size of the tree : 	87
+
+
+Weight: 2.42
+
+J48 pruned tree
+------------------
+
+chV4_QwaveAmp <= -1.6
+|   chV2_RPwave <= 0
+|   |   sex = 0: 3 (9.6/0.89)
+|   |   sex = 1: 15 (3.81/0.3)
+|   chV2_RPwave > 0: 7 (3.52)
+chV4_QwaveAmp > -1.6
+|   chV4_Swave <= 68
+|   |   chDIII_intrinsicReflecttions <= 52
+|   |   |   chV2_RPwaveExists = 0
+|   |   |   |   chV3_Swave <= 56
+|   |   |   |   |   chV3_Qwave <= 32
+|   |   |   |   |   |   chAVR_TwaveAmp <= -0.6
+|   |   |   |   |   |   |   heartrate <= 85
+|   |   |   |   |   |   |   |   chDIII_QwaveAmp <= -4.9: 2 (4.11/0.59)
+|   |   |   |   |   |   |   |   chDIII_QwaveAmp > -4.9
+|   |   |   |   |   |   |   |   |   Tinterval <= 129: 4 (5.09/1.77)
+|   |   |   |   |   |   |   |   |   Tinterval > 129
+|   |   |   |   |   |   |   |   |   |   chDI_QRSA <= 1.2: 16 (14.37/0.89)
+|   |   |   |   |   |   |   |   |   |   chDI_QRSA > 1.2
+|   |   |   |   |   |   |   |   |   |   |   chV1_PwaveAmp <= 0.4
+|   |   |   |   |   |   |   |   |   |   |   |   heartrate <= 54
+|   |   |   |   |   |   |   |   |   |   |   |   |   chDII_RRwaveExists = 0: 6 (5.98)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chDII_RRwaveExists = 1: 16 (3.52)
+|   |   |   |   |   |   |   |   |   |   |   |   heartrate > 54
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV3_JJwaveAmp <= -0.8: 6 (3.91/0.59)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV3_JJwaveAmp > -0.8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chV5_PwaveAmp <= -0.9: 16 (3.52)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chV5_PwaveAmp > -0.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_SwaveAmp <= -17.2: 16 (8.31/1.48)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_SwaveAmp > -17.2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_DD_RPwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV4_RPwaveAmp <= 0.6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_RPwaveAmp <= 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_JJwaveAmp <= 0.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_TwaveAmp <= 3.4: 1 (87.41/0.59)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_TwaveAmp > 3.4: 10 (5.29/1.48)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_JJwaveAmp > 0.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_PwaveAmp <= 0.7: 1 (3.54/0.59)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_PwaveAmp > 0.7: 10 (11.73/0.89)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_RPwaveAmp > 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_Rwave <= 56: 10 (17.72/0.3)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_Rwave > 56: 1 (3.52)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV4_RPwaveAmp > 0.6: 10 (3.62/0.3)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_DD_RPwaveExists = 1: 10 (3.52)
+|   |   |   |   |   |   |   |   |   |   |   chV1_PwaveAmp > 0.4
+|   |   |   |   |   |   |   |   |   |   |   |   chV1_DD_RTwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV6_Rwave <= 52: 1 (2.66/1.48)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV6_Rwave > 52: 16 (13.97/0.3)
+|   |   |   |   |   |   |   |   |   |   |   |   chV1_DD_RTwaveExists = 1: 10 (3.32)
+|   |   |   |   |   |   |   heartrate > 85
+|   |   |   |   |   |   |   |   chV2_DD_RTwaveExists = 0
+|   |   |   |   |   |   |   |   |   chAVF_JJwaveAmp <= 0.4
+|   |   |   |   |   |   |   |   |   |   chDIII_Swave <= 60
+|   |   |   |   |   |   |   |   |   |   |   chV1_JJwaveAmp <= 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   chAVR_Rwave <= 36: 5 (13.41/1.48)
+|   |   |   |   |   |   |   |   |   |   |   |   chAVR_Rwave > 36: 10 (2.07/0.89)
+|   |   |   |   |   |   |   |   |   |   |   chV1_JJwaveAmp > 0.5: 1 (3.25)
+|   |   |   |   |   |   |   |   |   |   chDIII_Swave > 60: 16 (4.11/0.59)
+|   |   |   |   |   |   |   |   |   chAVF_JJwaveAmp > 0.4: 7 (3.81/0.3)
+|   |   |   |   |   |   |   |   chV2_DD_RTwaveExists = 1: 2 (3.62/0.3)
+|   |   |   |   |   |   chAVR_TwaveAmp > -0.6
+|   |   |   |   |   |   |   heartrate <= 101
+|   |   |   |   |   |   |   |   chV2_RPwave <= 8
+|   |   |   |   |   |   |   |   |   chDI_PwaveAmp <= 0: 16 (6.84)
+|   |   |   |   |   |   |   |   |   chDI_PwaveAmp > 0
+|   |   |   |   |   |   |   |   |   |   chAVF_SPwave <= 32
+|   |   |   |   |   |   |   |   |   |   |   chDI_JJwaveAmp <= -0.6
+|   |   |   |   |   |   |   |   |   |   |   |   chV1_Qwave <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   Tinterval <= 209: 1 (22.09/1.18)
+|   |   |   |   |   |   |   |   |   |   |   |   |   Tinterval > 209: 2 (2.36/0.59)
+|   |   |   |   |   |   |   |   |   |   |   |   chV1_Qwave > 0: 2 (4.21)
+|   |   |   |   |   |   |   |   |   |   |   chDI_JJwaveAmp > -0.6
+|   |   |   |   |   |   |   |   |   |   |   |   chV5_JJwaveAmp <= -0.3: 2 (37.26/1.77)
+|   |   |   |   |   |   |   |   |   |   |   |   chV5_JJwaveAmp > -0.3: 1 (2.36/0.89)
+|   |   |   |   |   |   |   |   |   |   chAVF_SPwave > 32: 16 (3.52)
+|   |   |   |   |   |   |   |   chV2_RPwave > 8: 16 (7.13/0.3)
+|   |   |   |   |   |   |   heartrate > 101: 5 (4.21/0.59)
+|   |   |   |   |   chV3_Qwave > 32
+|   |   |   |   |   |   chDII_SwaveAmp <= -1: 6 (5.09/1.77)
+|   |   |   |   |   |   chDII_SwaveAmp > -1: 16 (6.65)
+|   |   |   |   chV3_Swave > 56
+|   |   |   |   |   chV6_intrinsicReflecttions <= 24
+|   |   |   |   |   |   sex = 0: 8 (3.91/0.59)
+|   |   |   |   |   |   sex = 1: 15 (3.52)
+|   |   |   |   |   chV6_intrinsicReflecttions > 24
+|   |   |   |   |   |   chAVR_Swave <= 0
+|   |   |   |   |   |   |   chV1_PwaveAmp <= -1: 14 (7.33/0.3)
+|   |   |   |   |   |   |   chV1_PwaveAmp > -1: 1 (6.27/0.89)
+|   |   |   |   |   |   chAVR_Swave > 0: 2 (3.62)
+|   |   |   chV2_RPwaveExists = 1: 14 (7.33/0.3)
+|   |   chDIII_intrinsicReflecttions > 52
+|   |   |   chDII_RPwave <= 20
+|   |   |   |   chAVF_Qwave <= 28
+|   |   |   |   |   chAVF_Qwave <= 24: 1 (11.29/2.95)
+|   |   |   |   |   chAVF_Qwave > 24: 2 (3.32)
+|   |   |   |   chAVF_Qwave > 28
+|   |   |   |   |   chV1_Qwave <= 84: 4 (27.18)
+|   |   |   |   |   chV1_Qwave > 84: 7 (3.52)
+|   |   |   chDII_RPwave > 20: 8 (3.52)
+|   chV4_Swave > 68
+|   |   chV1_RRwaveExists = 0
+|   |   |   chDI_Swave <= 24: 9 (5.58)
+|   |   |   chDI_Swave > 24: 15 (4.99/1.48)
+|   |   chV1_RRwaveExists = 1: 5 (6.65)
+
+Number of Leaves  : 	53
+
+Size of the tree : 	105
+
+
+Weight: 2.66
+
+J48 pruned tree
+------------------
+
+chV3_QwaveAmp <= -2.5
+|   chV1_RwaveAmp <= 0.7
+|   |   chDIII_Qwave <= 0: 3 (17.9)
+|   |   chDIII_Qwave > 0: 15 (2.04/0.16)
+|   chV1_RwaveAmp > 0.7
+|   |   height <= 170: 7 (3.66/1.78)
+|   |   height > 170: 16 (3.71/0.16)
+chV3_QwaveAmp > -2.5
+|   chV1_JJwaveAmp <= 2.2
+|   |   heartrate <= 58
+|   |   |   chV1_QRSA <= -8.6
+|   |   |   |   chAVL_QwaveAmp <= -0.6
+|   |   |   |   |   chAVF_Swave <= 28
+|   |   |   |   |   |   chV4_Swave <= 40: 10 (2.2/0.32)
+|   |   |   |   |   |   chV4_Swave > 40: 1 (7.21)
+|   |   |   |   |   chAVF_Swave > 28: 16 (2.04/0.16)
+|   |   |   |   chAVL_QwaveAmp > -0.6
+|   |   |   |   |   chAVR_RwaveAmp <= 1.7
+|   |   |   |   |   |   chV4_PwaveAmp <= 0.3: 16 (2.15/0.27)
+|   |   |   |   |   |   chV4_PwaveAmp > 0.3: 6 (33.88)
+|   |   |   |   |   chAVR_RwaveAmp > 1.7: 2 (3.66/1.78)
+|   |   |   chV1_QRSA > -8.6: 10 (9.04)
+|   |   heartrate > 58
+|   |   |   chV1_DD_RRwaveExists = 0
+|   |   |   |   chV1_RwaveAmp <= 5.1
+|   |   |   |   |   chDII_intrinsicReflecttions <= 48
+|   |   |   |   |   |   chV2_RPwave <= 24
+|   |   |   |   |   |   |   chAVF_TwaveAmp <= -0.5
+|   |   |   |   |   |   |   |   chV5_Qwave <= 16
+|   |   |   |   |   |   |   |   |   chAVR_Swave <= 0
+|   |   |   |   |   |   |   |   |   |   heartrate <= 102
+|   |   |   |   |   |   |   |   |   |   |   chV3_Rwave <= 32: 14 (2.04/0.16)
+|   |   |   |   |   |   |   |   |   |   |   chV3_Rwave > 32: 2 (20.26/0.79)
+|   |   |   |   |   |   |   |   |   |   heartrate > 102: 15 (4.52)
+|   |   |   |   |   |   |   |   |   chAVR_Swave > 0: 4 (2.09/0.32)
+|   |   |   |   |   |   |   |   chV5_Qwave > 16: 16 (4.35/0.32)
+|   |   |   |   |   |   |   chAVF_TwaveAmp > -0.5
+|   |   |   |   |   |   |   |   chV3_TwaveAmp <= 0.7
+|   |   |   |   |   |   |   |   |   chV1_Qwave <= 60
+|   |   |   |   |   |   |   |   |   |   chV1_RPwave <= 0
+|   |   |   |   |   |   |   |   |   |   |   chV5_TwaveAmp <= 0.4: 2 (12.89)
+|   |   |   |   |   |   |   |   |   |   |   chV5_TwaveAmp > 0.4: 1 (2.25)
+|   |   |   |   |   |   |   |   |   |   chV1_RPwave > 0: 1 (2.2/0.16)
+|   |   |   |   |   |   |   |   |   chV1_Qwave > 60: 15 (2.04/0.16)
+|   |   |   |   |   |   |   |   chV3_TwaveAmp > 0.7
+|   |   |   |   |   |   |   |   |   chV1_PwaveAmp <= -1.3
+|   |   |   |   |   |   |   |   |   |   chAVR_DD_RRwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   T <= 88: 14 (2.2/0.32)
+|   |   |   |   |   |   |   |   |   |   |   T > 88: 16 (3.76)
+|   |   |   |   |   |   |   |   |   |   chAVR_DD_RRwaveExists = 1: 2 (2.26)
+|   |   |   |   |   |   |   |   |   chV1_PwaveAmp > -1.3
+|   |   |   |   |   |   |   |   |   |   chAVF_Qwave <= 24
+|   |   |   |   |   |   |   |   |   |   |   chDI_intrinsicReflecttions <= 16
+|   |   |   |   |   |   |   |   |   |   |   |   QRSduration <= 82: 5 (2.09)
+|   |   |   |   |   |   |   |   |   |   |   |   QRSduration > 82: 8 (2.09/0.32)
+|   |   |   |   |   |   |   |   |   |   |   chDI_intrinsicReflecttions > 16
+|   |   |   |   |   |   |   |   |   |   |   |   chDII_DD_RRwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV2_PwaveAmp <= 0.7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_DD_RPwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_Rwave <= 16: 2 (2.42/0.16)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_Rwave > 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_RPwaveAmp <= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_QRSTA <= 1.7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age <= 68: 2 (2.09/0.16)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   age > 68: 16 (3.66)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_QRSTA > 1.7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_DD_RRwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PRinterval <= 209
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_intrinsicReflecttions <= 8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_Rwave <= 24
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_intrinsicReflecttions <= 36: 1 (12.2/0.16)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_intrinsicReflecttions > 36: 16 (2.04/0.16)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_Rwave > 24: 16 (3.76)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_intrinsicReflecttions > 8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_TwaveAmp <= -1.6: 10 (2.26)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_TwaveAmp > -1.6: 1 (133.4/9.88)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PRinterval > 209
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_Qwave <= 12
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_Swave <= 52: 1 (4.51)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_Swave > 52: 7 (2.04/0.16)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_Qwave > 12: 16 (5.7/1.94)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_DD_RRwaveExists = 1: 10 (2.35/0.47)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_RPwaveAmp > 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_Swave <= 44
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_Rwave <= 52: 10 (6.76)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_Rwave > 52: 1 (2.04/0.16)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_Swave > 44: 16 (3.56)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_DD_RPwaveExists = 1: 2 (2.41/0.63)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV2_PwaveAmp > 0.7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_PwaveAmp <= 0.8: 10 (8.23)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_PwaveAmp > 0.8: 2 (2.41/0.63)
+|   |   |   |   |   |   |   |   |   |   |   |   chDII_DD_RRwaveExists = 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_Rwave <= 32: 2 (2.25/0.47)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_Rwave > 32: 16 (4.04)
+|   |   |   |   |   |   |   |   |   |   chAVF_Qwave > 24
+|   |   |   |   |   |   |   |   |   |   |   chDII_SwaveAmp <= -2.4: 10 (6.46)
+|   |   |   |   |   |   |   |   |   |   |   chDII_SwaveAmp > -2.4
+|   |   |   |   |   |   |   |   |   |   |   |   chV1_Qwave <= 72
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV3_Swave <= 48: 4 (8.22/0.32)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV3_Swave > 48
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   QRSduration <= 93: 1 (3.66)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   QRSduration > 93: 2 (2.09/0.16)
+|   |   |   |   |   |   |   |   |   |   |   |   chV1_Qwave > 72: 8 (3.49/1.61)
+|   |   |   |   |   |   chV2_RPwave > 24
+|   |   |   |   |   |   |   chV6_PwaveAmp <= 0.6: 10 (11.71)
+|   |   |   |   |   |   |   chV6_PwaveAmp > 0.6: 2 (2.09/0.32)
+|   |   |   |   |   chDII_intrinsicReflecttions > 48
+|   |   |   |   |   |   chAVL_Rwave <= 40
+|   |   |   |   |   |   |   height <= 167: 15 (3.66/1.78)
+|   |   |   |   |   |   |   height > 167: 2 (4.04)
+|   |   |   |   |   |   chAVL_Rwave > 40: 4 (8.89)
+|   |   |   |   chV1_RwaveAmp > 5.1
+|   |   |   |   |   chAVL_Qwave <= 12
+|   |   |   |   |   |   chV6_Swave <= 16: 4 (6.78)
+|   |   |   |   |   |   chV6_Swave > 16: 14 (3.92/0.16)
+|   |   |   |   |   chAVL_Qwave > 12: 5 (5.59)
+|   |   |   chV1_DD_RRwaveExists = 1: 10 (11.46)
+|   chV1_JJwaveAmp > 2.2
+|   |   chDII_Qwave <= 12
+|   |   |   chAVF_Swave <= 56: 9 (4.61)
+|   |   |   chAVF_Swave > 56: 16 (2.41/0.63)
+|   |   chDII_Qwave > 12: 2 (2.26)
+
+Number of Leaves  : 	62
+
+Size of the tree : 	123
+
+
+Weight: 2.75
+
+J48 pruned tree
+------------------
+
+chV1_Qwave <= 76
+|   chV3_QwaveAmp <= -2.5
+|   |   chAVR_PwaveAmp <= -0.4
+|   |   |   chV1_RwaveAmp <= 0.9: 3 (9.67)
+|   |   |   chV1_RwaveAmp > 0.9: 16 (2.89/1.0)
+|   |   chAVR_PwaveAmp > -0.4: 6 (15.84/1.0)
+|   chV3_QwaveAmp > -2.5
+|   |   chV6_intrinsicReflecttions <= 52
+|   |   |   heartrate <= 91
+|   |   |   |   chDIII_TwaveAmp <= 2
+|   |   |   |   |   chDII_QwaveAmp <= -1.4
+|   |   |   |   |   |   chAVR_Qwave <= 0
+|   |   |   |   |   |   |   chAVR_PwaveAmp <= -0.8: 4 (6.53)
+|   |   |   |   |   |   |   chAVR_PwaveAmp > -0.8
+|   |   |   |   |   |   |   |   Q-Tinterval <= 350: 14 (2.0/1.0)
+|   |   |   |   |   |   |   |   Q-Tinterval > 350: 2 (2.23/0.08)
+|   |   |   |   |   |   chAVR_Qwave > 0: 6 (2.2/1.0)
+|   |   |   |   |   chDII_QwaveAmp > -1.4
+|   |   |   |   |   |   chV1_intrinsicReflecttions <= 32
+|   |   |   |   |   |   |   chV1_RPwaveAmp <= 1
+|   |   |   |   |   |   |   |   chV5_PwaveAmp <= -0.3
+|   |   |   |   |   |   |   |   |   chDI_Rwave <= 68
+|   |   |   |   |   |   |   |   |   |   chDIII_PwaveAmp <= -0.5: 16 (2.95/1.0)
+|   |   |   |   |   |   |   |   |   |   chDIII_PwaveAmp > -0.5: 1 (2.4)
+|   |   |   |   |   |   |   |   |   chDI_Rwave > 68: 10 (16.69)
+|   |   |   |   |   |   |   |   chV5_PwaveAmp > -0.3
+|   |   |   |   |   |   |   |   |   chV4_JJwaveAmp <= -1.3: 2 (7.38)
+|   |   |   |   |   |   |   |   |   chV4_JJwaveAmp > -1.3
+|   |   |   |   |   |   |   |   |   |   chDII_SwaveAmp <= -4.3
+|   |   |   |   |   |   |   |   |   |   |   chDII_Rwave <= 36: 6 (2.35/1.03)
+|   |   |   |   |   |   |   |   |   |   |   chDII_Rwave > 36: 10 (3.92/0.34)
+|   |   |   |   |   |   |   |   |   |   chDII_SwaveAmp > -4.3
+|   |   |   |   |   |   |   |   |   |   |   chDI_RPwave <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   chDI_Swave <= 56
+|   |   |   |   |   |   |   |   |   |   |   |   |   chDII_Rwave <= 28: 2 (3.43/1.29)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chDII_Rwave > 28
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   heartrate <= 58
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_JJwaveAmp <= -0.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   QRSduration <= 83: 6 (2.29/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   QRSduration > 83: 1 (17.73)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_JJwaveAmp > -0.4: 6 (20.08/2.95)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   heartrate > 58
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV3_QRSTA <= 14.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_TwaveAmp <= -0.9: 1 (11.25)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_TwaveAmp > -0.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV5_intrinsicReflecttions <= 24: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV5_intrinsicReflecttions > 24
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_JJwaveAmp <= -0.5: 1 (5.14/1.37)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_JJwaveAmp > -0.5: 2 (12.16/0.25)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV3_QRSTA > 14.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_RPwave <= 8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_Swave <= 72: 1 (90.95/5.84)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_Swave > 72: 16 (2.95/0.95)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_RPwave > 8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_intrinsicReflecttions <= 28: 10 (3.46/0.95)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_intrinsicReflecttions > 28: 1 (2.84)
+|   |   |   |   |   |   |   |   |   |   |   |   chDI_Swave > 56: 16 (3.29/1.29)
+|   |   |   |   |   |   |   |   |   |   |   chDI_RPwave > 0: 2 (3.69/1.29)
+|   |   |   |   |   |   |   chV1_RPwaveAmp > 1: 10 (7.2/1.08)
+|   |   |   |   |   |   chV1_intrinsicReflecttions > 32
+|   |   |   |   |   |   |   chV6_QRSTA <= 3.7: 2 (3.09/0.95)
+|   |   |   |   |   |   |   chV6_QRSTA > 3.7
+|   |   |   |   |   |   |   |   chV5_intrinsicReflecttions <= 36
+|   |   |   |   |   |   |   |   |   chV1_Rwave <= 20: 1 (2.98/1.98)
+|   |   |   |   |   |   |   |   |   chV1_Rwave > 20: 10 (44.85/0.95)
+|   |   |   |   |   |   |   |   chV5_intrinsicReflecttions > 36: 1 (2.32)
+|   |   |   |   chDIII_TwaveAmp > 2
+|   |   |   |   |   chAVF_TwaveAmp <= 2.9: 16 (15.87/0.08)
+|   |   |   |   |   chAVF_TwaveAmp > 2.9
+|   |   |   |   |   |   chV6_PwaveAmp <= 0.7: 10 (4.69/0.25)
+|   |   |   |   |   |   chV6_PwaveAmp > 0.7: 9 (2.0/1.0)
+|   |   |   heartrate > 91
+|   |   |   |   chDII_TwaveAmp <= -0.3
+|   |   |   |   |   chDII_Qwave <= 24
+|   |   |   |   |   |   chAVF_intrinsicReflecttions <= 28: 2 (3.46)
+|   |   |   |   |   |   chAVF_intrinsicReflecttions > 28: 15 (3.49/1.08)
+|   |   |   |   |   chDII_Qwave > 24: 4 (3.09/1.2)
+|   |   |   |   chDII_TwaveAmp > -0.3
+|   |   |   |   |   chV2_RPwave <= 16
+|   |   |   |   |   |   chDIII_TwaveAmp <= 0.4
+|   |   |   |   |   |   |   chAVR_Rwave <= 40: 5 (37.25/0.25)
+|   |   |   |   |   |   |   chAVR_Rwave > 40: 10 (3.46/0.95)
+|   |   |   |   |   |   chDIII_TwaveAmp > 0.4
+|   |   |   |   |   |   |   chV5_Qwave <= 0: 1 (8.57/1.08)
+|   |   |   |   |   |   |   chV5_Qwave > 0: 5 (2.0/1.0)
+|   |   |   |   |   chV2_RPwave > 16: 10 (3.81)
+|   |   chV6_intrinsicReflecttions > 52
+|   |   |   chDI_Qwave <= 0: 9 (3.95)
+|   |   |   chDI_Qwave > 0: 16 (15.78/0.95)
+chV1_Qwave > 76
+|   chDIII_Qwave <= 24
+|   |   chV1_Qwave <= 88: 3 (3.43/0.95)
+|   |   chV1_Qwave > 88: 9 (2.77)
+|   chDIII_Qwave > 24: 7 (17.64/1.95)
+
+Number of Leaves  : 	48
+
+Size of the tree : 	95
+
+
+Weight: 2.35
+
+J48 pruned tree
+------------------
+
+Pinterval <= 42
+|   chDIII_Rwave <= 32: 6 (8.83)
+|   chDIII_Rwave > 32
+|   |   chV1_QRSA <= -16.3: 2 (3.28/1.58)
+|   |   chV1_QRSA > -16.3: 15 (18.62/0.05)
+Pinterval > 42
+|   chAVF_Qwave <= 32
+|   |   chAVF_SwaveAmp <= -7
+|   |   |   chDIII_Qwave <= 28
+|   |   |   |   chV2_QwaveAmp <= -1: 3 (4.08/0.72)
+|   |   |   |   chV2_QwaveAmp > -1
+|   |   |   |   |   age <= 55: 9 (3.1/1.83)
+|   |   |   |   |   age > 55: 8 (5.44)
+|   |   |   chDIII_Qwave > 28: 7 (5.75)
+|   |   chAVF_SwaveAmp > -7
+|   |   |   heartrate <= 81
+|   |   |   |   chV3_Qwave <= 20
+|   |   |   |   |   chV3_DD_RTwaveExists = 0
+|   |   |   |   |   |   chDII_JJwaveAmp <= -0.9
+|   |   |   |   |   |   |   chV5_Rwave <= 72
+|   |   |   |   |   |   |   |   chV2_PwaveAmp <= 0.1: 2 (9.26/0.61)
+|   |   |   |   |   |   |   |   chV2_PwaveAmp > 0.1: 1 (2.77/1.25)
+|   |   |   |   |   |   |   chV5_Rwave > 72: 9 (2.15)
+|   |   |   |   |   |   chDII_JJwaveAmp > -0.9
+|   |   |   |   |   |   |   chAVL_JJwaveAmp <= -0.6
+|   |   |   |   |   |   |   |   chDII_TwaveAmp <= 1.6
+|   |   |   |   |   |   |   |   |   sex = 0: 2 (2.52/0.66)
+|   |   |   |   |   |   |   |   |   sex = 1
+|   |   |   |   |   |   |   |   |   |   chDII_Rwave <= 56: 1 (2.63)
+|   |   |   |   |   |   |   |   |   |   chDII_Rwave > 56: 2 (3.25/1.56)
+|   |   |   |   |   |   |   |   chDII_TwaveAmp > 1.6: 10 (30.63/1.2)
+|   |   |   |   |   |   |   chAVL_JJwaveAmp > -0.6
+|   |   |   |   |   |   |   |   chDII_QRSTA <= 12.6
+|   |   |   |   |   |   |   |   |   chV6_JJwaveAmp <= -0.5: 2 (2.84/0.75)
+|   |   |   |   |   |   |   |   |   chV6_JJwaveAmp > -0.5
+|   |   |   |   |   |   |   |   |   |   chDIII_intrinsicReflecttions <= 12: 1 (2.2/0.66)
+|   |   |   |   |   |   |   |   |   |   chDIII_intrinsicReflecttions > 12: 10 (12.25/0.62)
+|   |   |   |   |   |   |   |   chDII_QRSTA > 12.6
+|   |   |   |   |   |   |   |   |   chV2_SwaveAmp <= -20
+|   |   |   |   |   |   |   |   |   |   chDIII_Swave <= 16: 1 (3.34/1.32)
+|   |   |   |   |   |   |   |   |   |   chDIII_Swave > 16: 6 (6.1)
+|   |   |   |   |   |   |   |   |   chV2_SwaveAmp > -20
+|   |   |   |   |   |   |   |   |   |   chV1_RPwaveAmp <= 1
+|   |   |   |   |   |   |   |   |   |   |   chV6_PwaveAmp <= 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   chV2_TwaveAmp <= 0.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_SwaveAmp <= -1.3: 10 (2.6/0.56)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_SwaveAmp > -1.3: 1 (6.59/1.19)
+|   |   |   |   |   |   |   |   |   |   |   |   chV2_TwaveAmp > 0.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV1_intrinsicReflecttions <= 12
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   heartrate <= 58: 6 (3.35)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   heartrate > 58: 1 (10.92/0.52)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV1_intrinsicReflecttions > 12
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_JJwaveAmp <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_Rwave <= 44: 1 (5.45/0.55)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_Rwave > 44: 16 (55.42/4.12)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_JJwaveAmp > 0: 1 (11.17/1.19)
+|   |   |   |   |   |   |   |   |   |   |   chV6_PwaveAmp > 0.5: 1 (42.08/3.93)
+|   |   |   |   |   |   |   |   |   |   chV1_RPwaveAmp > 1
+|   |   |   |   |   |   |   |   |   |   |   QRST <= 75: 10 (8.42/0.55)
+|   |   |   |   |   |   |   |   |   |   |   QRST > 75: 16 (10.88)
+|   |   |   |   |   chV3_DD_RTwaveExists = 1: 2 (5.75)
+|   |   |   |   chV3_Qwave > 20
+|   |   |   |   |   chDII_DD_RRwaveExists = 0: 3 (3.12/0.52)
+|   |   |   |   |   chDII_DD_RRwaveExists = 1: 2 (5.44)
+|   |   |   heartrate > 81
+|   |   |   |   chV5_RwaveAmp <= 19.1
+|   |   |   |   |   chV3_TwaveAmp <= 5.7
+|   |   |   |   |   |   chV4_TwaveAmp <= 0.2: 2 (4.42/0.05)
+|   |   |   |   |   |   chV4_TwaveAmp > 0.2
+|   |   |   |   |   |   |   chV5_Rwave <= 44
+|   |   |   |   |   |   |   |   chV3_JJwaveAmp <= 0.2: 5 (26.32/1.43)
+|   |   |   |   |   |   |   |   chV3_JJwaveAmp > 0.2
+|   |   |   |   |   |   |   |   |   chV5_intrinsicReflecttions <= 24: 1 (3.85/0.48)
+|   |   |   |   |   |   |   |   |   chV5_intrinsicReflecttions > 24: 16 (2.44/1.38)
+|   |   |   |   |   |   |   chV5_Rwave > 44: 1 (9.18/1.88)
+|   |   |   |   |   chV3_TwaveAmp > 5.7
+|   |   |   |   |   |   heartrate <= 92
+|   |   |   |   |   |   |   chV6_Swave <= 16: 7 (5.75)
+|   |   |   |   |   |   |   chV6_Swave > 16: 1 (3.34)
+|   |   |   |   |   |   heartrate > 92: 16 (19.19/0.77)
+|   |   |   |   chV5_RwaveAmp > 19.1: 14 (19.1/1.3)
+|   chAVF_Qwave > 32
+|   |   chDII_RPwave <= 8
+|   |   |   chV1_Qwave <= 84
+|   |   |   |   chAVF_Qwave <= 56: 4 (32.59/0.7)
+|   |   |   |   chAVF_Qwave > 56
+|   |   |   |   |   chV6_QRSTA <= 18.2: 10 (3.02/1.8)
+|   |   |   |   |   chV6_QRSTA > 18.2: 1 (7.71)
+|   |   |   chV1_Qwave > 84: 7 (8.59)
+|   |   chDII_RPwave > 8: 8 (6.27/0.52)
+
+Number of Leaves  : 	46
+
+Size of the tree : 	91
+
+
+Weight: 2.44
+
+J48 pruned tree
+------------------
+
+chV3_QwaveAmp <= -2.5
+|   chV6_JJwaveAmp <= -0.7
+|   |   chV4_DD_RTwaveExists = 0: 6 (4.42)
+|   |   chV4_DD_RTwaveExists = 1: 7 (3.13)
+|   chV6_JJwaveAmp > -0.7
+|   |   sex = 0
+|   |   |   chV4_DD_RRwaveExists = 0: 3 (7.91/0.28)
+|   |   |   chV4_DD_RRwaveExists = 1: 16 (3.23)
+|   |   sex = 1: 15 (3.13)
+chV3_QwaveAmp > -2.5
+|   chV6_intrinsicReflecttions <= 56
+|   |   heartrate <= 58
+|   |   |   chV3_DD_RTwaveExists = 0
+|   |   |   |   Q-Tinterval <= 411
+|   |   |   |   |   chDIII_JJwaveAmp <= -0.4: 10 (3.41)
+|   |   |   |   |   chDIII_JJwaveAmp > -0.4
+|   |   |   |   |   |   chAVR_RwaveAmp <= 1.7
+|   |   |   |   |   |   |   chDIII_RRwaveExists = 0: 6 (51.64/1.68)
+|   |   |   |   |   |   |   chDIII_RRwaveExists = 1: 1 (2.96)
+|   |   |   |   |   |   chAVR_RwaveAmp > 1.7: 1 (5.13/0.72)
+|   |   |   |   Q-Tinterval > 411: 16 (7.64/1.39)
+|   |   |   chV3_DD_RTwaveExists = 1: 2 (3.13)
+|   |   heartrate > 58
+|   |   |   chDIII_Qwave <= 32
+|   |   |   |   heartrate <= 88
+|   |   |   |   |   chV3_PwaveAmp <= 1.3
+|   |   |   |   |   |   chAVR_RwaveAmp <= 2.7
+|   |   |   |   |   |   |   chV4_PwaveAmp <= -2.6: 15 (3.13)
+|   |   |   |   |   |   |   chV4_PwaveAmp > -2.6
+|   |   |   |   |   |   |   |   chAVR_RPwave <= 36
+|   |   |   |   |   |   |   |   |   chV3_TwaveAmp <= 2.2
+|   |   |   |   |   |   |   |   |   |   chV6_JJwaveAmp <= -0.2
+|   |   |   |   |   |   |   |   |   |   |   chDII_Rwave <= 56: 1 (5.88/2.19)
+|   |   |   |   |   |   |   |   |   |   |   chDII_Rwave > 56: 2 (17.71/1.04)
+|   |   |   |   |   |   |   |   |   |   chV6_JJwaveAmp > -0.2: 1 (6.66/0.66)
+|   |   |   |   |   |   |   |   |   chV3_TwaveAmp > 2.2
+|   |   |   |   |   |   |   |   |   |   chDII_RPwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   chV1_QwaveAmp <= -17: 2 (3.23)
+|   |   |   |   |   |   |   |   |   |   |   chV1_QwaveAmp > -17
+|   |   |   |   |   |   |   |   |   |   |   |   heartrate <= 81
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV4_RPwaveAmp <= 0.7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_TwaveAmp <= 0.3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_JJwaveAmp <= 0.9: 16 (15.97/0.29)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_JJwaveAmp > 0.9: 2 (2.45/1.07)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_TwaveAmp > 0.3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_RPwave <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV3_Swave <= 16: 16 (7.42/0.05)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV3_Swave > 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_PwaveAmp <= -0.8: 16 (6.37)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_PwaveAmp > -0.8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_SwaveAmp <= -16.3: 16 (4.8/0.38)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_SwaveAmp > -16.3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_JJwaveAmp <= -1.1: 16 (3.41)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_JJwaveAmp > -1.1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_JJwaveAmp <= 0.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV5_PwaveAmp <= -0.3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_JJwaveAmp <= 0.1: 10 (5.26)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_JJwaveAmp > 0.1: 1 (3.28)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV5_PwaveAmp > -0.3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_PwaveAmp <= 0.6: 1 (53.99/0.8)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_PwaveAmp > 0.6: 10 (2.08/0.44)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_JJwaveAmp > 0.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_PwaveAmp <= -0.3: 10 (13.01/0.72)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_PwaveAmp > -0.3: 1 (2.29)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_RPwave > 0: 16 (3.76)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV4_RPwaveAmp > 0.7: 10 (4.77)
+|   |   |   |   |   |   |   |   |   |   |   |   heartrate > 81
+|   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_JJwaveAmp <= 0.4: 1 (4.54/0.3)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_JJwaveAmp > 0.4: 7 (3.15/0.02)
+|   |   |   |   |   |   |   |   |   |   chDII_RPwaveExists = 1: 2 (4.1)
+|   |   |   |   |   |   |   |   chAVR_RPwave > 36: 10 (7.75/0.02)
+|   |   |   |   |   |   chAVR_RwaveAmp > 2.7
+|   |   |   |   |   |   |   chDI_Swave <= 0: 8 (3.25/0.3)
+|   |   |   |   |   |   |   chDI_Swave > 0: 10 (5.58/0.36)
+|   |   |   |   |   chV3_PwaveAmp > 1.3
+|   |   |   |   |   |   chDIII_Qwave <= 12: 2 (7.33/3.23)
+|   |   |   |   |   |   chDIII_Qwave > 12: 14 (6.25)
+|   |   |   |   heartrate > 88
+|   |   |   |   |   chV4_intrinsicReflecttions <= 44
+|   |   |   |   |   |   chV6_Qwave <= 24
+|   |   |   |   |   |   |   chDIII_Swave <= 60
+|   |   |   |   |   |   |   |   chAVR_Qwave <= 48
+|   |   |   |   |   |   |   |   |   chV1_RPwave <= 32
+|   |   |   |   |   |   |   |   |   |   chV1_DD_RRwaveExists = 0: 5 (26.77/2.71)
+|   |   |   |   |   |   |   |   |   |   chV1_DD_RRwaveExists = 1: 10 (8.21)
+|   |   |   |   |   |   |   |   |   chV1_RPwave > 32: 10 (17.78/0.29)
+|   |   |   |   |   |   |   |   chAVR_Qwave > 48: 1 (2.46/1.49)
+|   |   |   |   |   |   |   chDIII_Swave > 60: 16 (3.13)
+|   |   |   |   |   |   chV6_Qwave > 24: 16 (6.89)
+|   |   |   |   |   chV4_intrinsicReflecttions > 44: 14 (3.13)
+|   |   |   chDIII_Qwave > 32
+|   |   |   |   chV5_JJwaveAmp <= -1.9
+|   |   |   |   |   age <= 62: 15 (3.43/0.31)
+|   |   |   |   |   age > 62: 16 (3.41)
+|   |   |   |   chV5_JJwaveAmp > -1.9
+|   |   |   |   |   chDII_RPwave <= 20
+|   |   |   |   |   |   chV3_PwaveAmp <= -1: 7 (3.85)
+|   |   |   |   |   |   chV3_PwaveAmp > -1
+|   |   |   |   |   |   |   chV4_QRSTA <= -8: 2 (13.77/0.28)
+|   |   |   |   |   |   |   chV4_QRSTA > -8
+|   |   |   |   |   |   |   |   chV1_DD_RTwaveExists = 0
+|   |   |   |   |   |   |   |   |   chAVR_TwaveAmp <= -1.2: 1 (9.92/0.58)
+|   |   |   |   |   |   |   |   |   chAVR_TwaveAmp > -1.2
+|   |   |   |   |   |   |   |   |   |   chAVF_Qwave <= 24: 1 (3.41/1.24)
+|   |   |   |   |   |   |   |   |   |   chAVF_Qwave > 24: 4 (27.0/0.9)
+|   |   |   |   |   |   |   |   chV1_DD_RTwaveExists = 1: 2 (2.96)
+|   |   |   |   |   chDII_RPwave > 20: 8 (3.13)
+|   chV6_intrinsicReflecttions > 56
+|   |   chDI_Qwave <= 12: 9 (6.63)
+|   |   chDI_Qwave > 12: 4 (2.96)
+
+Number of Leaves  : 	56
+
+Size of the tree : 	111
+
+
+Weight: 2.93
+
+J48 pruned tree
+------------------
+
+chV1_JJwaveAmp <= 2.2
+|   chV3_QwaveAmp <= -2.5
+|   |   chV1_RwaveAmp <= 0.9
+|   |   |   chDI_PwaveAmp <= 0.2: 6 (3.99/1.66)
+|   |   |   chDI_PwaveAmp > 0.2: 3 (4.0)
+|   |   chV1_RwaveAmp > 0.9: 16 (6.13/1.65)
+|   chV3_QwaveAmp > -2.5
+|   |   Pinterval <= 37
+|   |   |   chV3_Swave <= 48
+|   |   |   |   chV4_intrinsicReflecttions <= 32: 2 (9.24/0.15)
+|   |   |   |   chV4_intrinsicReflecttions > 32: 1 (3.4)
+|   |   |   chV3_Swave > 48: 15 (12.16/1.8)
+|   |   Pinterval > 37
+|   |   |   chV3_DD_RPwaveExists = 0
+|   |   |   |   chV1_DD_RRwaveExists = 0
+|   |   |   |   |   chV1_RwaveAmp <= 5.1
+|   |   |   |   |   |   chAVF_intrinsicReflecttions <= 52
+|   |   |   |   |   |   |   heartrate <= 58
+|   |   |   |   |   |   |   |   chV1_RPwave <= 32
+|   |   |   |   |   |   |   |   |   chV5_PwaveAmp <= 0.6
+|   |   |   |   |   |   |   |   |   |   chAVL_Qwave <= 24
+|   |   |   |   |   |   |   |   |   |   |   chV4_PwaveAmp <= 0.3: 16 (2.11/0.46)
+|   |   |   |   |   |   |   |   |   |   |   chV4_PwaveAmp > 0.3: 6 (26.02)
+|   |   |   |   |   |   |   |   |   |   chAVL_Qwave > 24: 2 (3.5/1.85)
+|   |   |   |   |   |   |   |   |   chV5_PwaveAmp > 0.6
+|   |   |   |   |   |   |   |   |   |   chV3_Rwave <= 44
+|   |   |   |   |   |   |   |   |   |   |   chAVL_SwaveAmp <= -2.6: 6 (2.16)
+|   |   |   |   |   |   |   |   |   |   |   chAVL_SwaveAmp > -2.6: 1 (12.38)
+|   |   |   |   |   |   |   |   |   |   chV3_Rwave > 44: 6 (6.33/1.8)
+|   |   |   |   |   |   |   |   chV1_RPwave > 32: 10 (10.6)
+|   |   |   |   |   |   |   heartrate > 58
+|   |   |   |   |   |   |   |   heartrate <= 101
+|   |   |   |   |   |   |   |   |   chV4_TwaveAmp <= 0.6
+|   |   |   |   |   |   |   |   |   |   chV3_TwaveAmp <= 2.2
+|   |   |   |   |   |   |   |   |   |   |   chDII_RRwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   |   chDII_QwaveAmp <= -2: 1 (2.78)
+|   |   |   |   |   |   |   |   |   |   |   |   chDII_QwaveAmp > -2
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV1_intrinsicReflecttions <= 56: 2 (45.25/1.63)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV1_intrinsicReflecttions > 56: 1 (2.94)
+|   |   |   |   |   |   |   |   |   |   |   chDII_RRwaveExists = 1: 1 (3.68)
+|   |   |   |   |   |   |   |   |   |   chV3_TwaveAmp > 2.2
+|   |   |   |   |   |   |   |   |   |   |   QRS <= 41: 1 (3.42/0.15)
+|   |   |   |   |   |   |   |   |   |   |   QRS > 41: 16 (3.11)
+|   |   |   |   |   |   |   |   |   chV4_TwaveAmp > 0.6
+|   |   |   |   |   |   |   |   |   |   chAVR_DD_RPwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   chDI_TwaveAmp <= -0.5
+|   |   |   |   |   |   |   |   |   |   |   |   chDII_intrinsicReflecttions <= 28: 16 (6.14/1.56)
+|   |   |   |   |   |   |   |   |   |   |   |   chDII_intrinsicReflecttions > 28: 14 (2.39/0.75)
+|   |   |   |   |   |   |   |   |   |   |   chDI_TwaveAmp > -0.5
+|   |   |   |   |   |   |   |   |   |   |   |   chV1_Qwave <= 60
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV2_RPwave <= 8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chV4_JJwaveAmp <= -1.3: 2 (2.94)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chV4_JJwaveAmp > -1.3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_JJwaveAmp <= 0.7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_Swave <= 64
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_JJwaveAmp <= 0.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_RPwave <= 36
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_intrinsicReflecttions <= 72
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_Rwave <= 80
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_Swave <= 72
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_PwaveAmp <= -0.4: 16 (3.53/0.03)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_PwaveAmp > -0.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_DD_RRwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_Rwave <= 84
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_JJwaveAmp <= -0.5: 10 (3.05/0.59)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_JJwaveAmp > -0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV3_TwaveAmp <= 6.7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV3_PwaveAmp <= -0.7: 16 (2.02/0.37)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV3_PwaveAmp > -0.7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PRinterval <= 209: 1 (82.5/0.65)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PRinterval > 209: 7 (2.53/0.88)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV3_TwaveAmp > 6.7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_intrinsicReflecttions <= 24: 16 (3.96/0.76)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_intrinsicReflecttions > 24
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV4_intrinsicReflecttions <= 32: 10 (3.54/0.57)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV4_intrinsicReflecttions > 32: 1 (4.61)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_Rwave > 84: 16 (2.33)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_DD_RRwaveExists = 1: 16 (2.39/0.41)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_Swave > 72: 16 (3.6)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_Rwave > 80: 10 (4.99/0.3)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_intrinsicReflecttions > 72: 10 (3.88/0.01)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_RPwave > 36: 10 (5.52)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_JJwaveAmp > 0.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PRinterval <= 149: 5 (2.33)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   PRinterval > 149: 1 (2.2)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_Swave > 64: 2 (5.88/2.16)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_JJwaveAmp > 0.7
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_Qwave <= 0: 10 (4.75/0.01)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_Qwave > 0: 4 (2.03/0.33)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV2_RPwave > 8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_Qwave <= 24
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_Rwave <= 56: 10 (24.33/0.44)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_Rwave > 56: 2 (2.25/0.55)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_Qwave > 24: 16 (3.88)
+|   |   |   |   |   |   |   |   |   |   |   |   chV1_Qwave > 60
+|   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_QRSTA <= 1.3: 4 (5.43/1.9)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_QRSTA > 1.3: 1 (2.33)
+|   |   |   |   |   |   |   |   |   |   chAVR_DD_RPwaveExists = 1: 5 (2.78)
+|   |   |   |   |   |   |   |   heartrate > 101: 5 (13.64/0.25)
+|   |   |   |   |   |   chAVF_intrinsicReflecttions > 52
+|   |   |   |   |   |   |   chV2_PwaveAmp <= -0.3: 4 (4.96)
+|   |   |   |   |   |   |   chV2_PwaveAmp > -0.3: 2 (3.74/2.0)
+|   |   |   |   |   chV1_RwaveAmp > 5.1
+|   |   |   |   |   |   chAVL_Qwave <= 12
+|   |   |   |   |   |   |   chV4_Swave <= 44: 14 (2.04/0.39)
+|   |   |   |   |   |   |   chV4_Swave > 44: 4 (4.32)
+|   |   |   |   |   |   chAVL_Qwave > 12: 5 (3.65)
+|   |   |   |   chV1_DD_RRwaveExists = 1: 10 (15.26)
+|   |   |   chV3_DD_RPwaveExists = 1: 14 (4.59)
+chV1_JJwaveAmp > 2.2
+|   chDI_Qwave <= 0: 9 (6.62/0.19)
+|   chDI_Qwave > 0: 16 (31.88)
+
+Number of Leaves  : 	57
+
+Size of the tree : 	113
+
+
+Weight: 2.79
+
+J48 pruned tree
+------------------
+
+chDII_RwaveAmp <= 2.3
+|   chV2_PwaveAmp <= -0.2
+|   |   chDII_JJwaveAmp <= 0.2: 7 (35.46/0.1)
+|   |   chDII_JJwaveAmp > 0.2: 10 (3.2/1.33)
+|   chV2_PwaveAmp > -0.2
+|   |   heartrate <= 70
+|   |   |   chAVF_Rwave <= 28: 6 (2.49/0.08)
+|   |   |   chAVF_Rwave > 28: 8 (27.59)
+|   |   heartrate > 70
+|   |   |   chAVL_Swave <= 8: 1 (3.5/0.21)
+|   |   |   chAVL_Swave > 8
+|   |   |   |   Q-Tinterval <= 343: 4 (2.45)
+|   |   |   |   Q-Tinterval > 343: 2 (2.16/0.11)
+chDII_RwaveAmp > 2.3
+|   chV4_Qwave <= 28
+|   |   chV3_PwaveAmp <= 1.3
+|   |   |   chDII_QwaveAmp <= -1.4
+|   |   |   |   chV1_RPwave <= 12
+|   |   |   |   |   PRinterval <= 136
+|   |   |   |   |   |   Q-Tinterval <= 350: 14 (2.43/0.87)
+|   |   |   |   |   |   Q-Tinterval > 350: 2 (3.1)
+|   |   |   |   |   PRinterval > 136: 4 (11.29/1.23)
+|   |   |   |   chV1_RPwave > 12: 10 (2.05)
+|   |   |   chDII_QwaveAmp > -1.4
+|   |   |   |   chAVL_TwaveAmp <= -1.7
+|   |   |   |   |   P <= 45: 9 (3.1/0.07)
+|   |   |   |   |   P > 45: 10 (16.49/0.87)
+|   |   |   |   chAVL_TwaveAmp > -1.7
+|   |   |   |   |   chDIII_Rwave <= 92
+|   |   |   |   |   |   chV4_intrinsicReflecttions <= 44
+|   |   |   |   |   |   |   heartrate <= 57
+|   |   |   |   |   |   |   |   chV1_QRSA <= -8.6
+|   |   |   |   |   |   |   |   |   chV4_PwaveAmp <= 0.6: 6 (14.31/0.87)
+|   |   |   |   |   |   |   |   |   chV4_PwaveAmp > 0.6
+|   |   |   |   |   |   |   |   |   |   sex = 0: 1 (3.54)
+|   |   |   |   |   |   |   |   |   |   sex = 1: 6 (2.48/0.08)
+|   |   |   |   |   |   |   |   chV1_QRSA > -8.6: 10 (7.5)
+|   |   |   |   |   |   |   heartrate > 57
+|   |   |   |   |   |   |   |   heartrate <= 101
+|   |   |   |   |   |   |   |   |   chV1_RPwaveAmp <= 0.9
+|   |   |   |   |   |   |   |   |   |   chV3_Qwave <= 32
+|   |   |   |   |   |   |   |   |   |   |   chAVF_Qwave <= 24
+|   |   |   |   |   |   |   |   |   |   |   |   chV2_TwaveAmp <= -1: 10 (5.28/0.87)
+|   |   |   |   |   |   |   |   |   |   |   |   chV2_TwaveAmp > -1
+|   |   |   |   |   |   |   |   |   |   |   |   |   chDI_DD_RPwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_DD_RTwaveExists = 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_TwaveAmp <= -0.1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_intrinsicReflecttions <= 36
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_JJwaveAmp <= -0.8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_Qwave <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   QRSduration <= 96: 2 (3.41)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   QRSduration > 96: 10 (2.19/0.95)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_Qwave > 0: 1 (3.35)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVL_JJwaveAmp > -0.8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV4_TwaveAmp <= 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_Rwave <= 60: 1 (10.18)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_Rwave > 60: 2 (3.3)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV4_TwaveAmp > 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV3_Swave <= 28
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_Swave <= 36: 1 (8.52)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_Swave > 36: 5 (2.31/0.12)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV3_Swave > 28
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_PwaveAmp <= 0.1: 1 (100.34/15.38)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_PwaveAmp > 0.1: 16 (2.07/0.12)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_intrinsicReflecttions > 36: 2 (2.97/0.19)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVR_TwaveAmp > -0.1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_RPwave <= 12
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_Rwave <= 44: 2 (15.48/0.3)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV2_Rwave > 44: 1 (2.97)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_RPwave > 12: 1 (2.55/0.93)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chDII_DD_RTwaveExists = 1: 2 (3.47/0.27)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chDI_DD_RPwaveExists = 1: 2 (2.83/1.35)
+|   |   |   |   |   |   |   |   |   |   |   chAVF_Qwave > 24
+|   |   |   |   |   |   |   |   |   |   |   |   chV6_JJwaveAmp <= -0.5: 2 (4.65)
+|   |   |   |   |   |   |   |   |   |   |   |   chV6_JJwaveAmp > -0.5: 4 (3.31/1.35)
+|   |   |   |   |   |   |   |   |   |   chV3_Qwave > 32: 6 (2.34/1.1)
+|   |   |   |   |   |   |   |   |   chV1_RPwaveAmp > 0.9
+|   |   |   |   |   |   |   |   |   |   chV1_TwaveAmp <= 1.1
+|   |   |   |   |   |   |   |   |   |   |   height <= 176: 10 (18.42/0.95)
+|   |   |   |   |   |   |   |   |   |   |   height > 176: 1 (2.34)
+|   |   |   |   |   |   |   |   |   |   chV1_TwaveAmp > 1.1: 16 (2.93/1.28)
+|   |   |   |   |   |   |   |   heartrate > 101
+|   |   |   |   |   |   |   |   |   chAVR_Qwave <= 48
+|   |   |   |   |   |   |   |   |   |   chAVR_intrinsicReflecttions <= 52: 5 (8.1/0.08)
+|   |   |   |   |   |   |   |   |   |   chAVR_intrinsicReflecttions > 52: 10 (2.45)
+|   |   |   |   |   |   |   |   |   chAVR_Qwave > 48: 15 (5.23/1.48)
+|   |   |   |   |   |   chV4_intrinsicReflecttions > 44
+|   |   |   |   |   |   |   chDII_RRwaveExists = 0: 1 (3.98/2.08)
+|   |   |   |   |   |   |   chDII_RRwaveExists = 1: 16 (14.18)
+|   |   |   |   |   chDIII_Rwave > 92
+|   |   |   |   |   |   height <= 167: 16 (16.31)
+|   |   |   |   |   |   height > 167: 10 (2.05/0.18)
+|   |   chV3_PwaveAmp > 1.3
+|   |   |   chDII_Rwave <= 48: 14 (2.98/1.23)
+|   |   |   chDII_Rwave > 48: 16 (33.97)
+|   chV4_Qwave > 28: 15 (14.43/0.24)
+
+Number of Leaves  : 	49
+
+Size of the tree : 	97
+
+
+Weight: 2.44
+
+J48 pruned tree
+------------------
+
+chDII_RwaveAmp <= 2.3
+|   chV6_QRSA <= 24.2
+|   |   chV3_Qwave <= 32
+|   |   |   chV2_Swave <= 48
+|   |   |   |   chAVR_TwaveAmp <= -1.3: 1 (2.13)
+|   |   |   |   chAVR_TwaveAmp > -1.3
+|   |   |   |   |   Q-Tinterval <= 343: 4 (2.35/1.02)
+|   |   |   |   |   Q-Tinterval > 343: 6 (2.42/1.11)
+|   |   |   chV2_Swave > 48: 8 (15.04/0.04)
+|   |   chV3_Qwave > 32: 3 (10.19)
+|   chV6_QRSA > 24.2: 7 (20.03/0.8)
+chDII_RwaveAmp > 2.3
+|   chAVR_DD_RPwaveExists = 0
+|   |   Pinterval <= 0
+|   |   |   chDIII_DD_RRwaveExists = 0
+|   |   |   |   chDIII_Swave <= 8
+|   |   |   |   |   height <= 165: 15 (19.62)
+|   |   |   |   |   height > 165: 2 (2.84/1.02)
+|   |   |   |   chDIII_Swave > 8: 1 (2.36/1.38)
+|   |   |   chDIII_DD_RRwaveExists = 1: 16 (8.42)
+|   |   Pinterval > 0
+|   |   |   chV5_Rwave <= 64
+|   |   |   |   chV3_Swave <= 0
+|   |   |   |   |   chV1_intrinsicReflecttions <= 4: 3 (3.22)
+|   |   |   |   |   chV1_intrinsicReflecttions > 4: 16 (22.54/0.04)
+|   |   |   |   chV3_Swave > 0
+|   |   |   |   |   chAVF_PwaveAmp <= 1.8
+|   |   |   |   |   |   chDII_TwaveAmp <= 0.5
+|   |   |   |   |   |   |   chV2_RPwave <= 8
+|   |   |   |   |   |   |   |   heartrate <= 100
+|   |   |   |   |   |   |   |   |   chDIII_intrinsicReflecttions <= 52
+|   |   |   |   |   |   |   |   |   |   chAVR_QRSTA <= -13.9
+|   |   |   |   |   |   |   |   |   |   |   chAVF_JJwaveAmp <= -0.3: 2 (5.3/0.86)
+|   |   |   |   |   |   |   |   |   |   |   chAVF_JJwaveAmp > -0.3: 1 (10.03/0.17)
+|   |   |   |   |   |   |   |   |   |   chAVR_QRSTA > -13.9: 2 (26.78/1.12)
+|   |   |   |   |   |   |   |   |   chDIII_intrinsicReflecttions > 52
+|   |   |   |   |   |   |   |   |   |   chDII_Rwave <= 68: 4 (2.19/0.07)
+|   |   |   |   |   |   |   |   |   |   chDII_Rwave > 68: 2 (2.37/1.12)
+|   |   |   |   |   |   |   |   heartrate > 100: 5 (2.42/0.62)
+|   |   |   |   |   |   |   chV2_RPwave > 8: 16 (9.71)
+|   |   |   |   |   |   chDII_TwaveAmp > 0.5
+|   |   |   |   |   |   |   chV3_JJwaveAmp <= -0.8
+|   |   |   |   |   |   |   |   chV2_Rwave <= 36: 6 (6.82/1.2)
+|   |   |   |   |   |   |   |   chV2_Rwave > 36: 5 (2.45/1.23)
+|   |   |   |   |   |   |   chV3_JJwaveAmp > -0.8
+|   |   |   |   |   |   |   |   chAVL_intrinsicReflecttions <= 8
+|   |   |   |   |   |   |   |   |   chDIII_PwaveAmp <= 1.1
+|   |   |   |   |   |   |   |   |   |   chV2_intrinsicReflecttions <= 12: 6 (2.52/0.11)
+|   |   |   |   |   |   |   |   |   |   chV2_intrinsicReflecttions > 12
+|   |   |   |   |   |   |   |   |   |   |   chV4_intrinsicReflecttions <= 40: 1 (8.47/0.05)
+|   |   |   |   |   |   |   |   |   |   |   chV4_intrinsicReflecttions > 40: 10 (2.16/0.05)
+|   |   |   |   |   |   |   |   |   chDIII_PwaveAmp > 1.1: 7 (5.51/0.06)
+|   |   |   |   |   |   |   |   chAVL_intrinsicReflecttions > 8
+|   |   |   |   |   |   |   |   |   chAVF_QwaveAmp <= -1.4
+|   |   |   |   |   |   |   |   |   |   chV4_Swave <= 40: 14 (2.83/1.51)
+|   |   |   |   |   |   |   |   |   |   chV4_Swave > 40
+|   |   |   |   |   |   |   |   |   |   |   chAVL_PwaveAmp <= 0.1: 4 (5.09/0.68)
+|   |   |   |   |   |   |   |   |   |   |   chAVL_PwaveAmp > 0.1: 10 (2.23/0.8)
+|   |   |   |   |   |   |   |   |   chAVF_QwaveAmp > -1.4
+|   |   |   |   |   |   |   |   |   |   chV1_QRSA <= -30
+|   |   |   |   |   |   |   |   |   |   |   chV6_intrinsicReflecttions <= 24: 16 (28.28/0.0)
+|   |   |   |   |   |   |   |   |   |   |   chV6_intrinsicReflecttions > 24
+|   |   |   |   |   |   |   |   |   |   |   |   chV4_Swave <= 40: 1 (4.41/1.02)
+|   |   |   |   |   |   |   |   |   |   |   |   chV4_Swave > 40: 2 (3.25/1.47)
+|   |   |   |   |   |   |   |   |   |   chV1_QRSA > -30
+|   |   |   |   |   |   |   |   |   |   |   chV5_RwaveAmp <= 19.5
+|   |   |   |   |   |   |   |   |   |   |   |   Pinterval <= 52: 16 (5.57/0.13)
+|   |   |   |   |   |   |   |   |   |   |   |   Pinterval > 52
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV6_JJwaveAmp <= 0.3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_Swave <= 56
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV5_TwaveAmp <= 0.9: 1 (10.66/2.6)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV5_TwaveAmp > 0.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_QRSA <= 20.8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_PwaveAmp <= 0: 1 (2.22/0.45)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_PwaveAmp > 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_QwaveAmp <= -0.8: 1 (4.32/0.62)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDI_QwaveAmp > -0.8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_intrinsicReflecttions <= 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_Qwave <= 0: 1 (5.35/0.83)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_Qwave > 0: 10 (2.32/0.77)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chDIII_intrinsicReflecttions > 16
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_Swave <= 32
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   P <= 55: 1 (2.45/0.05)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   P > 55: 10 (2.02/0.38)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_Swave > 32: 10 (71.24/2.19)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   chAVF_QRSA > 20.8: 1 (11.12/1.14)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chV1_Swave > 56: 1 (17.37/3.37)
+|   |   |   |   |   |   |   |   |   |   |   |   |   chV6_JJwaveAmp > 0.3
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_intrinsicReflecttions <= 20: 16 (5.44)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   chV6_intrinsicReflecttions > 20: 10 (3.88/2.29)
+|   |   |   |   |   |   |   |   |   |   |   chV5_RwaveAmp > 19.5
+|   |   |   |   |   |   |   |   |   |   |   |   chV5_JJwaveAmp <= -0.6: 16 (18.8)
+|   |   |   |   |   |   |   |   |   |   |   |   chV5_JJwaveAmp > -0.6: 10 (3.79/1.99)
+|   |   |   |   |   chAVF_PwaveAmp > 1.8: 16 (20.65)
+|   |   |   chV5_Rwave > 64
+|   |   |   |   chDI_intrinsicReflecttions <= 40: 1 (2.8/1.37)
+|   |   |   |   chDI_intrinsicReflecttions > 40
+|   |   |   |   |   chDI_Rwave <= 92: 14 (6.07/0.62)
+|   |   |   |   |   chDI_Rwave > 92: 9 (2.7)
+|   chAVR_DD_RPwaveExists = 1: 5 (9.24/0.05)
+
+Number of Leaves  : 	51
+
+Size of the tree : 	101
+
+
+Weight: 2.43
+
+Number of performed Iterations: 10
+
+
+Time taken to build model: 3.08 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         319               70.5752 %
+Incorrectly Classified Instances       133               29.4248 %
+Kappa statistic                          0.5441
+Mean absolute error                      0.0369
+Root mean squared error                  0.1821
+Relative absolute error                 43.0985 %
+Root relative squared error             88.5771 %
+Total Number of Instances              452     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,869    0,290    0,780      0,869    0,822      0,590    0,887     0,891     1
+                 0,500    0,037    0,595      0,500    0,543      0,501    0,882     0,563     2
+                 0,867    0,009    0,765      0,867    0,813      0,807    0,973     0,716     3
+                 0,400    0,016    0,462      0,400    0,429      0,412    0,935     0,520     4
+                 0,615    0,009    0,667      0,615    0,640      0,630    0,866     0,708     5
+                 0,640    0,023    0,615      0,640    0,627      0,605    0,947     0,709     6
+                 0,000    0,009    0,000      0,000    0,000      -0,008   0,473     0,018     7
+                 0,000    0,000    0,000      0,000    0,000      0,000    0,896     0,039     8
+                 1,000    0,002    0,900      1,000    0,947      0,948    1,000     1,000     9
+                 0,600    0,042    0,638      0,600    0,619      0,573    0,905     0,671     10
+                 0,000    0,000    0,000      0,000    0,000      0,000    ?         ?         11
+                 0,000    0,000    0,000      0,000    0,000      0,000    ?         ?         12
+                 0,000    0,000    0,000      0,000    0,000      0,000    ?         ?         13
+                 0,000    0,002    0,000      0,000    0,000      -0,004   0,771     0,046     14
+                 0,200    0,004    0,333      0,200    0,250      0,252    0,853     0,303     15
+                 0,045    0,019    0,111      0,045    0,065      0,041    0,631     0,084     16
+Weighted Avg.    0,706    0,169    0,672      0,706    0,686      0,548    0,881     0,740     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   g   h   i   j   k   l   m   n   o   p   <-- classified as
+ 213  10   0   1   1   4   1   0   1   8   0   0   0   0   0   6 |   a = 1
+  13  22   0   2   0   1   0   0   0   3   0   0   0   1   1   1 |   b = 2
+   0   1  13   0   0   1   0   0   0   0   0   0   0   0   0   0 |   c = 3
+   3   1   0   6   1   0   2   0   0   2   0   0   0   0   0   0 |   d = 4
+   4   0   0   0   8   0   1   0   0   0   0   0   0   0   0   0 |   e = 5
+   7   0   1   0   0  16   0   0   0   1   0   0   0   0   0   0 |   f = 6
+   2   0   1   0   0   0   0   0   0   0   0   0   0   0   0   0 |   g = 7
+   1   0   0   1   0   0   0   0   0   0   0   0   0   0   0   0 |   h = 8
+   0   0   0   0   0   0   0   0   9   0   0   0   0   0   0   0 |   i = 9
+  13   1   0   2   1   2   0   0   0  30   0   0   0   0   0   1 |   j = 10
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 |   k = 11
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 |   l = 12
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0 |   m = 13
+   3   0   0   0   1   0   0   0   0   0   0   0   0   0   0   0 |   n = 14
+   1   1   1   1   0   0   0   0   0   0   0   0   0   0   1   0 |   o = 15
+  13   1   1   0   0   2   0   0   0   3   0   0   0   0   1   1 |   p = 16
+
